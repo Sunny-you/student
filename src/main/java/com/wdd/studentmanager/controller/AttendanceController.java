@@ -75,7 +75,7 @@ public class AttendanceController {
         }
         PageBean<Attendance> pageBean = attendanceService.queryPage(paramMap);
         if(!StringUtils.isEmpty(from) && from.equals("combox")){
-            return pageBean.getDatas();
+            return  pageBean.getDatas();
         }else{
             Map<String,Object> result = new HashMap();
             result.put("total",pageBean.getTotalsize());
